@@ -23,8 +23,8 @@
 	#define MAIN_JMP_ADDR 0x0101C55C
 #elif VER == 410
 	#include "codehandler410.h"
-	#define INSTALL_ADDR  0x011DD000
-	#define MAIN_JMP_ADDR 0x0101C55C
+	#define INSTALL_ADDR  0x011D9800
+	#define MAIN_JMP_ADDR 0x0101BD4C /* coreinit.rpl start at 0x0101BC00 */
 #elif VER == 500
 	#include "codehandler500.h"
 	#define INSTALL_ADDR  0x011DD000
