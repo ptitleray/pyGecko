@@ -1,6 +1,6 @@
 #include "loader.h"
 
-#define RW_MEM_MAP 0xA0000000
+#define RW_MEM_MAP 0xC1000000 // 0xA0000000 for normal kernel, 0xC1000000 for loadiine kernel
 #if VER == 200
 	#include "codehandler310.h" //TODO
 	#define INSTALL_ADDR  0x011D3000
@@ -23,7 +23,7 @@
 	#define MAIN_JMP_ADDR 0x0101C55C
 #elif VER == 410
 	#include "codehandler410.h"
-	#define INSTALL_ADDR  0x011D9800
+	#define INSTALL_ADDR  0x011D7AC0
 	#define MAIN_JMP_ADDR 0x0101BD4C /* coreinit.rpl start at 0x0101BC00 */
 #elif VER == 500
 	#include "codehandler500.h"
